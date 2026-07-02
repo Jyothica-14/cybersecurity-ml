@@ -150,6 +150,10 @@ Login to continue to Cyber Attack Detection System
 </p>
 
 <form action="https://onrender.com" method="POST">
+    {% if error %}
+        <p style="color: red; font-weight: bold;">{{ error }}</p>
+    {% endif %}
+
 
 <input
 type="email"
