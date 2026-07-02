@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prediction Result</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+
+}
+
+.container{
+
+    width:500px;
+    background:white;
+    border-radius:18px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+    font-size:60px;
+    margin-bottom:10px;
+
+}
+
+h1{
+
+    color:#0f172a;
+    margin-bottom:10px;
+
+}
+
+p{
+
+    color:gray;
+    margin-bottom:30px;
+
+}
+
+.result{
+
+    background:#e8f5e9;
+    color:#2e7d32;
+    padding:18px;
+    border-radius:10px;
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:35px;
+    border:2px solid #81c784;
+
+}
+
+.buttons{
+
+    display:flex;
+    justify-content:center;
+    gap:15px;
+
+}
+
+button{
+
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+.predict{
+
+    background:#2563eb;
+    color:white;
+
+}
+
+.predict:hover{
+
+    background:#1d4ed8;
+
+}
+
+.home{
+
+    background:#16a34a;
+    color:white;
+
+}
+
+.home:hover{
+
+    background:#15803d;
+
+}
+
+.footer{
+
+    margin-top:30px;
+    color:gray;
+    font-size:13px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="icon">🛡️</div>
+
+<h1>Prediction Complete</h1>
+
+<p>The machine learning model has analyzed the provided network data.</p>
+
+<div class="result">
+
+{{ prediction }}
+
+</div>
+
+<div class="buttons">
+
+<a href="/predict">
+<button class="predict">
+
+Predict Again
+
+</button>
+</a>
+
+<a href="/">
+<button class="home">
+
+Home
+
+</button>
+</a>
+
+</div>
+
+<div class="footer">
+
+Cyber Attack Detection System | Flask + Random Forest
+
+</div>
+
+</div>
+
+</body>
+</html>

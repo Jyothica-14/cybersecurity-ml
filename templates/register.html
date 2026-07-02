@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.container{
+
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.icon{
+
+    text-align:center;
+    font-size:55px;
+
+}
+
+h2{
+
+    text-align:center;
+    color:#0f172a;
+    margin:15px 0 5px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+    color:gray;
+    margin-bottom:25px;
+
+}
+
+input{
+
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+
+}
+
+input:focus{
+
+    border-color:#2563eb;
+
+}
+
+button{
+
+    width:100%;
+    padding:13px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+}
+
+.bottom{
+
+    text-align:center;
+    margin-top:20px;
+    font-size:14px;
+
+}
+
+.bottom a{
+
+    color:#2563eb;
+    text-decoration:none;
+    font-weight:600;
+
+}
+
+.bottom a:hover{
+
+    text-decoration:underline;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="icon">🛡️</div>
+
+<h2>Create Account</h2>
+
+<p class="subtitle">
+Register to continue to Cyber Attack Detection System
+</p>
+
+<form action="/login" register="POST">
+
+<input
+type="text"
+name="fullname"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+required>
+
+<input
+type="password"
+name="confirm"
+placeholder="Confirm Password"
+required>
+
+<button type="submit">
+
+Register
+
+</button>
+
+</form>
+
+<div class="bottom">
+
+Already a user?
+
+<a href="/login">
+
+Login
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

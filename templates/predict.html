@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cyber Attack Prediction</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:#eef4ff;
+
+}
+
+.header{
+
+    width:100%;
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:26px;
+    font-weight:600;
+
+}
+
+.container{
+
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+h2{
+
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:30px;
+
+}
+
+.grid{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+
+}
+
+.input-box{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+label{
+
+    margin-bottom:6px;
+    font-weight:500;
+    color:#333;
+
+}
+
+input{
+
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#2563eb;
+    box-shadow:0 0 8px rgba(37,99,235,.3);
+
+}
+
+.button{
+
+    margin-top:35px;
+    text-align:center;
+
+}
+
+button{
+
+    padding:14px 45px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+    transform:scale(1.03);
+
+}
+
+.footer{
+
+    text-align:center;
+    margin-top:25px;
+    color:gray;
+    font-size:14px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+🛡️ Cyber Attack Detection Dashboard
+
+</div>
+
+<div class="container">
+
+<h2>Enter Network Details</h2>
+
+<form action="/predict" method="POST">
+
+<div class="grid">
+
+<div class="input-box">
+<label>Timestamp</label>
+<input type="number" step="any" name="timestamp" required>
+</div>
+
+<div class="input-box">
+<label>Source IP (Encoded)</label>
+<input type="number" step="any" name="src_ip" required>
+</div>
+
+<div class="input-box">
+<label>Destination IP (Encoded)</label>
+<input type="number" step="any" name="dst_ip" required>
+</div>
+
+<div class="input-box">
+<label>Source Port</label>
+<input type="number" step="any" name="src_port" required>
+</div>
+
+<div class="input-box">
+<label>Destination Port</label>
+<input type="number" step="any" name="dst_port" required>
+</div>
+
+<div class="input-box">
+<label>Protocol (Encoded)</label>
+<input type="number" step="any" name="protocol" required>
+</div>
+
+<div class="input-box">
+<label>Bytes Sent</label>
+<input type="number" step="any" name="bytes_sent" required>
+</div>
+
+<div class="input-box">
+<label>Bytes Received</label>
+<input type="number" step="any" name="bytes_received" required>
+</div>
+
+<div class="input-box">
+<label>User Agent (Encoded)</label>
+<input type="number" step="any" name="user_agent" required>
+</div>
+
+<div class="input-box">
+<label>URL (Encoded)</label>
+<input type="number" step="any" name="url" required>
+</div>
+
+<div class="input-box">
+<label>Internal Network (0/1)</label>
+<input type="number" step="any" name="is_internal" required>
+</div>
+
+<div class="input-box">
+<label>Label</label>
+<input type="number" step="any" name="label" required>
+</div>
+
+</div>
+
+<div class="button">
+
+<button type="submit">
+
+🔍 Predict Attack
+
+</button>
+
+</div>
+
+</form>
+
+<div class="footer">
+
+Machine Learning Model : Random Forest Classifier
+
+</div>
+
+</div>
+
+</body>
+
+</html>
