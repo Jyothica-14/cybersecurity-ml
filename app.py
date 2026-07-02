@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request
+from flask_cors import CORS  # <-- Added for cloud communication safety
 import pickle
 import numpy as np
 
 app = Flask(__name__)
+CORS(app)  # <-- Added: Ensures your app can safely talk to the cloud
 
 # Load trained model
 with open("random_forest_model.pkl", "rb") as file:
